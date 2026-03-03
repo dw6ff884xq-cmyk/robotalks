@@ -77,111 +77,40 @@
     <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center mb-4">
         <i class="fa fa-rocket text-blue-400 text-xl"></i>
     </div>
-
-    <!-- 机会推荐-卡片式布局+悬停显示详情 -->
-<div class="bg-dark-blue/30 p-5 rounded-lg border border-blue-900/20 mb-6">
-    <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center mb-4">
-        <i class="fa fa-rocket text-blue-400 text-xl"></i>
-    </div>
-    <h4 class="text-xl font-bold text-blue-400 mb-4">机会推荐</h4>
-    <p class="text-gray-400 mb-6">具身智能人形机器人赛道技术卡位战已开启，核心岗位缺口超10万，以下为领域稀缺顶级人才机会：</p>
-    
-    <!-- 卡片网格布局 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- 卡片1：首席科学家 -->
-        <div class="relative group">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">核心岗</span>
-                <h5 class="text-lg font-semibold text-white mb-2">首席科学家（CS）</h5>
-                <!-- 悬停显示的详情 -->
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">核心岗</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">首席科学家（CS）</h5>
-                    <p class="text-gray-300 text-sm">牵头大模型具身化架构设计，主导多模态感知-决策-执行闭环技术突破，要求顶会顶刊成果+量产落地经验。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 卡片2：VLA算法专家 -->
-        <div class="relative group">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">算法岗</span>
-                <h5 class="text-lg font-semibold text-white mb-2">VLA算法专家</h5>
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">算法岗</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">VLA算法专家</h5>
-                    <p class="text-gray-300 text-sm">攻克长程视觉-语言-动作对齐难题，搞定柔性物体操作、动态场景自适应，需精通Transformer+强化学习。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 卡片3：运控算法专家 -->
-        <div class="relative group">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">算法岗</span>
-                <h5 class="text-lg font-semibold text-white mb-2">运控算法专家</h5>
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">算法岗</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">运控算法专家</h5>
-                    <p class="text-gray-300 text-sm">负责人形机器人动力学建模、高精度轨迹规划、抗干扰控制，要求熟练掌握PID/MPC/自适应控制算法。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 卡片4：CTO -->
-        <div class="relative group">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">管理岗</span>
-                <h5 class="text-lg font-semibold text-white mb-2">CTO</h5>
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">管理岗</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">CTO</h5>
-                    <p class="text-gray-300 text-sm">统筹技术路线图与量产落地，主导核心专利布局，需兼具前沿技术判断力与产业资源整合能力。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 卡片5：硬件架构专家 -->
-        <div class="relative group">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">硬件岗</span>
-                <h5 class="text-lg font-semibold text-white mb-2">硬件架构专家</h5>
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">硬件岗</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">硬件架构专家</h5>
-                    <p class="text-gray-300 text-sm">牵头关节模组、驱控一体、传感器融合方案设计，攻克高功率密度、低延迟、高可靠性技术瓶颈。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 卡片6：机器人系统集成专家 -->
-        <div class="relative group">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">集成岗</span>
-                <h5 class="text-lg font-semibold text-white mb-2">机器人系统集成专家</h5>
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">集成岗</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">机器人系统集成专家</h5>
-                    <p class="text-gray-300 text-sm">负责端到端系统搭建与优化，打通感知-算法-硬件-软件全链路，要求复杂场景落地经验。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 卡片7：具身智能算法负责人 -->
-        <div class="relative group col-span-1 sm:col-span-2 lg:col-span-3">
-            <div class="bg-blue-900/20 border border-blue-800/30 rounded-lg p-4 h-full transition-all duration-300 group-hover:bg-blue-900/40 group-hover:shadow-lg group-hover:shadow-blue-500/20">
-                <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">负责人</span>
-                <h5 class="text-lg font-semibold text-white mb-2">具身智能算法负责人</h5>
-                <div class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 z-10 top-0 left-0 w-full h-full bg-dark-blue/95 rounded-lg p-4 border border-blue-700/50">
-                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded mb-2 inline-block">负责人</span>
-                    <h5 class="text-lg font-semibold text-white mb-2">具身智能算法负责人</h5>
-                    <p class="text-gray-300 text-sm">带领团队突破端到端机器人学习、因果推理等核心技术，需顶会论文+工业级项目双重背书。</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        
+    <div class="section">
+        <h2>📌 机会推荐</h2>
+        <p>具身智能人形机器人赛道技术卡位战已开启，核心岗位缺口超10万，以下为领域稀缺顶级人才机会：
+    </p>
+            <span>首席科学家（CS）：牵头大模型具身化架构设计，主导多模态感知-决策-执行闭环技术突破，要求顶会顶刊成果+量产落地经验；</span>
+        </li>
+        <li class="flex items-start">
+            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">算法岗</span>
+            <span>VLA算法专家：攻克长程视觉-语言-动作对齐难题，搞定柔性物体操作、动态场景自适应，需精通Transformer+强化学习；</span>
+        </li>
+        <li class="flex items-start">
+            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">算法岗</span>
+            <span>运控算法专家：负责人形机器人动力学建模、高精度轨迹规划、抗干扰控制，要求熟练掌握PID/MPC/自适应控制算法；</span>
+        </li>
+        <li class="flex items-start">
+            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">管理岗</span>
+            <span>CTO：统筹技术路线图与量产落地，主导核心专利布局，需兼具前沿技术判断力与产业资源整合能力；</span>
+        </li>
+        <li class="flex items-start">
+            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">硬件岗</span>
+            <span>硬件架构专家：牵头关节模组、驱控一体、传感器融合方案设计，攻克高功率密度、低延迟、高可靠性技术瓶颈；</span>
+        </li>
+        <li class="flex items-start">
+            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">集成岗</span>
+            <span>机器人系统集成专家：负责端到端系统搭建与优化，打通感知-算法-硬件-软件全链路，要求复杂场景落地经验；</span>
+        </li>
+        <li class="flex items-start">
+            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">负责人</span>
+            <span>具身智能算法负责人：带领团队突破端到端机器人学习、因果推理等核心技术，需顶会论文+工业级项目双重背书。</span>
+        </li>
+    </ul>
 </div>
-
+    
     <div class="section">
         <h2>🏢 核心企业</h2>
         <div class="card-box">
