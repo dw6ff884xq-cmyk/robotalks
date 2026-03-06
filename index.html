@@ -14,51 +14,314 @@
         body {
             background: #0b1020;
             color: #fff;
-            line-height: 1.6;
+            line-height: 1.8; /* 提升行高增强可读性 */
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px; /* 调整内边距，避免内容贴边 */
         }
         header {
             text-align: center;
-            padding: 60px 0 30px;
+            padding: 80px 0 40px; /* 增加上下间距 */
         }
         header h1 {
             font-size: 42px;
-            margin-bottom: 10px;
+            margin-bottom: 16px; /* 优化标题间距 */
             background: linear-gradient(to right, #4fc3dc, #6a76e6);
             -webkit-background-clip: text;
             color: transparent;
+            font-weight: 700;
         }
         header p {
             font-size: 18px;
             color: #aaa;
+            max-width: 800px; /* 限制副标题宽度 */
+            margin: 0 auto; /* 居中显示 */
         }
+        /* 统一所有板块样式 */
         .section {
             margin: 40px 0;
-            padding: 30px;
+            padding: 36px; /* 增加内边距 */
             background: rgba(255,255,255,0.05);
             border-radius: 16px;
+            border: 1px solid rgba(79, 195, 220, 0.1); /* 增加细边框提升质感 */
         }
         .section h2 {
-            font-size: 26px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 24px; /* 优化标题间距 */
             color: #4fc3dc;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px; /* 图标与文字间距 */
+        }
+        .section h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: #4fc3dc;
+            border-radius: 2px;
+        }
+        .section p {
+            font-size: 16px;
+            color: #e0e0e0; /* 提升正文文字亮度 */
+            margin-bottom: 16px; /* 段落底部间距 */
         }
         .card-box {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 24px; /* 增加卡片间距 */
+            margin-top: 24px;
         }
         .card {
             background: rgba(255,255,255,0.08);
-            padding: 20px;
+            padding: 24px; /* 增加卡片内边距 */
             border-radius: 12px;
+            border: 1px solid rgba(79, 195, 220, 0.1);
+            transition: all 0.3s ease; /* 增加过渡效果 */
+        }
+        .card:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: rgba(79, 195, 220, 0.2);
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            color: #4fc3dc;
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .card p {
+            color: #ccc;
+            margin-bottom: 0; /* 清除卡片内段落间距 */
+        }
+        /* 机会推荐列表样式优化 */
+        .opportunity-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .opportunity-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px; /* 列表项间距 */
+            padding: 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+        }
+        .opportunity-list li:last-child {
+            margin-bottom: 0; /* 最后一项去除间距 */
+        }
+        .tag {
+            background: rgba(79, 195, 220, 0.15);
+            color: #4fc3dc;
+            font-size: 14px;
+            padding: 4px 12px;
+            border-radius: 16px;
+            margin-right: 12px;
+            margin-top: 4px;
+            flex-shrink: 0; /* 防止标签被压缩 */
+            font-weight: 500;
+        }
+        .tag-content {
+            flex: 1;
+            color: #e0e0e0;
+            font-size: 16px;
+        }
+        /* 联系板块样式统一 */
+        .contact-section {
+            margin: 40px 0;
+            padding: 36px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(79, 195, 220, 0.1);
+            text-align: center;
+        }
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(79, 195, 220, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .contact-icon i {
+            color: #4fc3dc;
+            font-size: 24px;
+        }
+        .contact-section h4 {
+            font-size: 22px;
+            color: #4fc3dc;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        .contact-section p {
+            color: #aaa;
+            margin-bottom: 24px;
+        }
+        .qrcode-container {
+            display: inline-block;
+            background: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(79, 195, 220, 0.1);
+        }
+        .qrcode-container img {
+            width: 180px;
+            height: 180px;
+            display: block;
+        }
+        /* 悬浮按钮组样式 */
+        .float-buttons {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 9998;
+        }
+        .float-btn {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(79, 195, 220, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            text-decoration: none;
+        }
+        .float-btn:hover {
+            background: rgba(79, 195, 220, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 195, 220, 0.2);
+        }
+        .float-btn img {
+            width: 38px;
+            height: 38px;
+        }
+        .consult-icon {
+            width: 38px;
+            height: 38px;
+            color: #4fc3dc;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* 弹窗样式优化 */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .popup.show {
+            display: flex;
+        }
+        .popup-content {
+            background: rgba(11, 16, 32, 0.95);
+            border: 1px solid rgba(79, 195, 220, 0.3);
+            padding: 32px; /* 增加弹窗内边距 */
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+            max-width: 90%;
+            width: 340px; /* 微调弹窗宽度 */
+            position: relative;
+            text-align: center;
+        }
+        #wechat-popup img {
+            width: 100%;
+            max-width: 260px; /* 限制二维码最大宽度 */
+            border-radius: 12px;
+            margin: 0 auto 16px; /* 居中并增加间距 */
+            border: 1px solid rgba(79, 195, 220, 0.2);
+            display: block;
+        }
+        #wechat-popup p {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(79, 195, 220, 0.3);
+            cursor: pointer;
+            font-size: 18px;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+        .close-btn:hover {
+            background: rgba(79, 195, 220, 0.2);
+            color: #fff;
+        }
+        /* 移动端适配优化 */
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0 30px;
+            }
+            header h1 {
+                font-size: 32px;
+            }
+            header p {
+                font-size: 16px;
+            }
+            .section {
+                padding: 24px;
+                margin: 30px 0;
+            }
+            .section h2 {
+                font-size: 24px;
+            }
+            .contact-section {
+                padding: 24px;
+                margin: 30px 0;
+            }
+            .float-buttons {
+                right: 20px;
+                bottom: 20px;
+            }
+            .float-btn {
+                width: 56px;
+                height: 56px;
+            }
+            .consult-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 20px;
+            }
+            .qrcode-container img {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -72,13 +335,7 @@
         <h2>📌 行业概述</h2>
         <p>具身智能（Embodied AI）是让机器人拥有真实世界感知、认知、行动与交互能力的新一代人工智能技术，被视为机器人、自动驾驶、工业制造、家庭服务的核心未来方向。</p>
     </div>
-<!-- 机会推荐板块（和网站原有模块格式完全统一） -->
-<div class="bg-dark-blue/30 p-5 rounded-lg border border-blue-900/20">
-    <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center mb-4">
-        <i class="fa fa-rocket text-blue-400 text-xl"></i>
-    </div>
-        
-    
+
     <div class="section">
         <h2>🏢 核心企业</h2>
         <div class="card-box">
@@ -105,77 +362,108 @@
         <h2>💼 应用场景</h2>
         <p>工业制造、家庭服务、医疗康复、仓储物流、科研探索、特种作业、智慧城市等。</p>
     </div>
-</div>
 
-        <div class="section">
-        <h2>💼 机会推荐</h2>
-        <p>具身智能人形机器人赛道技术卡位战已开启，核心岗位缺口超10万，以下为领域稀缺顶级人才机会：
+    <div class="section">
+        <h2>🚀 机会推荐</h2>
+        <p>具身智能人形机器人赛道技术卡位战已开启，核心岗位缺口超10万，以下为领域稀缺顶级人才机会：</p>
+        <ul class="opportunity-list">
+            <li>
+                <span class="tag">管理岗</span>
+                <span class="tag-content">首席科学家（CS）：牵头大模型具身化架构设计，主导多模态感知-决策-执行闭环技术突破，要求顶会顶刊成果+量产落地经验；</span>
+            </li>
+            <li>
+                <span class="tag">算法岗</span>
+                <span class="tag-content">VLA算法专家：攻克长程视觉-语言-动作对齐难题，搞定柔性物体操作、动态场景自适应，需精通Transformer+强化学习；</span>
+            </li>
+            <li>
+                <span class="tag">算法岗</span>
+                <span class="tag-content">运控算法专家：负责人形机器人动力学建模、高精度轨迹规划、抗干扰控制，要求熟练掌握PID/MPC/自适应控制算法；</span>
+            </li>
+            <li>
+                <span class="tag">管理岗</span>
+                <span class="tag-content">CTO：统筹技术路线图与量产落地，主导核心专利布局，需兼具前沿技术判断力与产业资源整合能力；</span>
+            </li>
+            <li>
+                <span class="tag">硬件岗</span>
+                <span class="tag-content">硬件架构专家：牵头关节模组、驱控一体、传感器融合方案设计，攻克高功率密度、低延迟、高可靠性技术瓶颈；</span>
+            </li>
+            <li>
+                <span class="tag">集成岗</span>
+                <span class="tag-content">机器人系统集成专家：负责端到端系统搭建与优化，打通感知-算法-硬件-软件全链路，要求复杂场景落地经验；</span>
+            </li>
+            <li>
+                <span class="tag">算法岗</span>
+                <span class="tag-content">具身智能算法负责人：带领团队突破端到端机器人学习、因果推理等核心技术，需顶会论文+工业级项目双重背书。</span>
+            </li>
+        </ul>
     </div>
-</div>
-    
-     <div class="section">
-        </p>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">管理岗</span>
-            <span>首席科学家（CS）：牵头大模型具身化架构设计，主导多模态感知-决策-执行闭环技术突破，要求顶会顶刊成果+量产落地经验；</span>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">算法岗</span>
-            <span>VLA算法专家：攻克长程视觉-语言-动作对齐难题，搞定柔性物体操作、动态场景自适应，需精通Transformer+强化学习；</span>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">算法岗</span>
-            <span>运控算法专家：负责人形机器人动力学建模、高精度轨迹规划、抗干扰控制，要求熟练掌握PID/MPC/自适应控制算法；</span>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">管理岗</span>
-            <span>CTO：统筹技术路线图与量产落地，主导核心专利布局，需兼具前沿技术判断力与产业资源整合能力；</span>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">硬件岗</span>
-            <span>硬件架构专家：牵头关节模组、驱控一体、传感器融合方案设计，攻克高功率密度、低延迟、高可靠性技术瓶颈；</span>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">集成岗</span>
-            <span>机器人系统集成专家：负责端到端系统搭建与优化，打通感知-算法-硬件-软件全链路，要求复杂场景落地经验；</span>
-        </li>
-        <li class="flex items-start">
-            <span class="bg-blue-900/30 text-blue-300 text-xs px-2 py-1 rounded mr-3 mt-1">算法岗</span>
-            <span>具身智能算法负责人：带领团队突破端到端机器人学习、因果推理等核心技术，需顶会论文+工业级项目双重背书。</span>
-        </li>
-    </ul>
-</div>
 
-    <!-- 微信联系模块（和网站风格统一） -->
-<div class="bg-dark-blue/30 p-5 rounded-lg border border-blue-900/20 mb-6">
-    <div class="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center mb-4">
-        <i class="fa fa-weixin text-blue-400 text-xl"></i>
-    </div>
-    <h4 class="text-xl font-bold text-blue-400 mb-3">联系交流</h4>
-    <p class="text-gray-400 mb-4">
-        欢迎联系我们：
-    </p>
-    <src=“wechat-qrcode.png“
-    <div class="flex justify-center items-center">
-        <div class="bg-white p-2 rounded-lg shadow-lg shadow-blue-500/10">
-            <img src="wechat-qrcode.png" alt="微信二维码" class="w-10 h-10 object-contain" />
+    <div class="contact-section">
+        <div class="contact-icon">
+            <i class="fa fa-weixin"></i>
+        </div>
+        <h4>联系交流</h4>
+        <p>欢迎联系我们，交流具身智能机器人行业信息</p>
+        <div class="qrcode-container">
+            <img src="wechat-qrcode.png" alt="wechat-qacode.png" />
         </div>
     </div>
-    <p class="text-gray-500 text-sm text-center mt-3">
-       
-    </p>
 </div>
 
-   
-    
-<!-- 右下角 AI 智能体按钮（一定显示、可点击对话）-->
-<div style="position:fixed;bottom:30px;right:30px;z-index:9999;">
-  <a href="https://doubao.com/bot/BXy4GTs5" target="_blank" 
-     style="background:#009FFF; color:white; padding:14px 22px; border-radius:50px; font-size:16px; text-decoration:none; box-shadow:0 4px 20px rgba(0,159,255,0.4); font-weight:bold;">
-     💬 咨询更多行业信息
+<!-- 悬浮按钮组 -->
+<div class="float-buttons">
+  <!-- 微信按钮 -->
+  <div class="float-btn" id="wechat-btn">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@9.19.0/icons/wechat.svg" alt="微信" style="filter: invert(1);">
+  </div>
+  <!-- 咨询按钮 -->
+  <a href="https://doubao.com/bot/BXy4GTs5" target="_blank" class="float-btn">
+    <div class="consult-icon">💬</div>
   </a>
 </div>
+
+<!-- 微信二维码弹窗 -->
+<div class="popup" id="wechat-popup">
+  <div class="popup-content">
+    <button class="close-btn" data-target="wechat">×</button>
+    <img src="wechat-qrcode.png" alt="wechat-qacode.png">
+    <p>扫码添加微信，交流具身智能机器人行业信息</p>
+  </div>
+</div>
+
+<!-- 弹窗交互脚本 -->
+<script>
+  // 获取元素
+  const wechatBtn = document.getElementById('wechat-btn');
+  const wechatPopup = document.getElementById('wechat-popup');
+  const closeBtns = document.querySelectorAll('.close-btn');
+
+  // 点击微信按钮显示二维码弹窗
+  wechatBtn.addEventListener('click', () => {
+    wechatPopup.classList.add('show');
+  });
+
+  // 点击关闭按钮关闭弹窗
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      wechatPopup.classList.remove('show');
+    });
+  });
+
+  // 点击遮罩层关闭弹窗
+  wechatPopup.addEventListener('click', (e) => {
+    if (e.target === wechatPopup) {
+      wechatPopup.classList.remove('show');
+    }
+  });
+
+  // ESC键关闭弹窗
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      wechatPopup.classList.remove('show');
+    }
+  });
+</script>
 
 </body>
 </html>
